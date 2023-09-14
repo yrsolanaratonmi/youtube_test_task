@@ -1,0 +1,17 @@
+
+<a [href]="'https://www.youtube.com/watch?v=' + video.id" class="link">
+  <p-card [header]="video.snippet.title"
+    [subheader]="video.snippet.publishedAt" styleClass="card">
+
+      <ng-template pTemplate="header">
+        <img alt="Card" [src]="video.snippet.thumbnails.medium.url" />
+      </ng-template>
+      <p class="description">
+        {{video.snippet.description}}
+      </p>
+      <ng-template pTemplate="footer">
+        <p-button *ngIf="!(isLiked$ | async)" label="Like" styleClass="p-button-danger" icon="pi pi-heart" (click)="like($event)"></p-button>
+        <p-button *ngIf="(isLiked$ | async)" label="Disike" icon="pi pi-heart"(click)="removeLike($event)" ></p-button>
+      </ng-template>
+  </p-card>
+</a>

@@ -1,0 +1,41 @@
+:host {
+  text-decoration: none;
+  color: #202020;
+
+  .link {
+    text-decoration: none;
+    display: block;
+  }
+
+  .description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    font-size: 0.75rem;
+    height: 4.5rem;
+  }
+  ::ng-deep .card {
+    width: 20rem;
+    height: 30rem;
+
+    .card-body {
+      height: 23rem;
+      overflow: hidden;
+    }
+
+    .p-card-content {
+      padding: 0;
+    }
+
+    .p-card-title {
+      font-size: 1rem;
+      height: 3.5rem;
+    }
+
+    .p-card-footer {
+      justify-self: end;
+      align-self: self-end;
+    }
+  }
+}
